@@ -15,11 +15,10 @@ def saving_annual_summary(
         savings_total += (interest_month + monthly_saving)
         savings_added = savings_total - initial_savings
         if (month % 3) == 0:
-            saving_line = (
+            saving_summary += (
             f"{str(month).rjust(5)}|"
             f"{str(round(interest_month,2)).rjust(8)}|"
             f"{str(round(interest_total_value,2)).rjust(14)}|"
             f"{str(round(savings_added,2)).rjust(12)}|"
             f"{str(round(savings_total,2)).rjust(12)}\n")
-            saving_summary += saving_line
     return saving_summary
